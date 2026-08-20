@@ -14,8 +14,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
-  --font-sans: var(--font-geist);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-jakarta);
 }
 
 :root {
@@ -23,30 +22,24 @@
   --background: #0a0a0a;
   --foreground: #ffffff;
   --card: #1c1c1e;
-  --card-foreground: #ffffff;
+  --card-foreground: #f4f4f5;
   --primary: #ff5500;
   --primary-foreground: #0a0a0a;
   --muted-foreground: #a1a1aa;
   --border: #2d2d30;
   --ring: #ff5500;
-  --font-geist: 'Arial', sans-serif;
-  --font-geist-mono: 'Courier New', monospace;
+  --font-jakarta: 'Plus Jakarta Sans', 'Arial', sans-serif;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  html {
-    background: var(--background);
-  }
+  * { @apply border-border outline-ring/50; }
+  html { background: var(--background); }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 82% 18%, rgba(255, 85, 0, 0.055), transparent 30%), radial-gradient(circle at 12% 72%, rgba(39, 39, 42, 0.35), transparent 36%);
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a {
-    transition-duration: 180ms;
-  }
+  a { transition-duration: 180ms; }
 }
