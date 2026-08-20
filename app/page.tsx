@@ -1,4 +1,5 @@
 import { ArrowUpRight, ChevronRight, Menu, ShieldCheck, Truck, X } from 'lucide-react'
+import { PhilosophyGrid } from '@/components/philosophy-grid'
 
 const stats = [
   { value: '28+', label: 'Yrs Combined Leadership' },
@@ -109,6 +110,7 @@ export default function Page() {
           ))}
         </section>
       </div>
+      <PhilosophyGrid />
     </main>
   )
 }
