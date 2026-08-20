@@ -29,7 +29,9 @@ const philosophyCards = [
 
 export function PhilosophyGrid() {
   return (
-    <section className="border-t border-white/10 bg-background px-5 py-20 sm:px-8 sm:py-24 lg:px-12" aria-labelledby="philosophy-title">
+    <section className="relative isolate overflow-hidden border-t border-white/10 px-5 py-20 sm:px-8 sm:py-24 lg:px-12" aria-labelledby="philosophy-title">
+      <div className="pointer-events-none absolute inset-0 -z-20 bg-[url('/industrial-crane-hero.png')] bg-cover bg-center" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-black/60" aria-hidden="true" />
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
           <span className="inline-flex rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 font-sans text-[10px] font-bold tracking-[0.16em] text-primary">
@@ -47,13 +49,13 @@ export function PhilosophyGrid() {
           {philosophyCards.map(({ title, description, icon: Icon }) => (
             <article
               key={title}
-              className="group rounded-2xl border border-zinc-800 bg-zinc-900/80 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-zinc-900"
+              className="group rounded-2xl border border-zinc-800 bg-zinc-900/90 p-6 shadow-[0_16px_45px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 hover:border-primary"
             >
               <Icon aria-hidden="true" className="size-7 text-primary" strokeWidth={1.7} />
               <h3 className="mt-8 font-sans text-lg font-bold tracking-[-0.025em] text-foreground">
                 {title}
               </h3>
-              <p className="mt-3 font-sans text-sm leading-6 text-muted-foreground">
+              <p className="mt-3 font-sans text-sm leading-6 text-zinc-300">
                 {description}
               </p>
             </article>
