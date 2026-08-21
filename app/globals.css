@@ -42,4 +42,31 @@
 
 @media (prefers-reduced-motion: no-preference) {
   a { transition-duration: 180ms; }
+
+  @keyframes route-dash {
+    to { stroke-dashoffset: -32; }
+  }
+
+  @keyframes route-truck {
+    0% { offset-distance: 0%; }
+    100% { offset-distance: 100%; }
+  }
+
+  .animate-route-dash {
+    animation: route-dash 1.8s linear infinite;
+  }
+
+  .animate-route-truck {
+    offset-path: path('M 120px 80px C 340px 28px, 650px 132px, 880px 80px');
+    offset-rotate: 0deg;
+    animation: route-truck 5s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-route-dash,
+  .animate-route-truck,
+  .animate-ping {
+    animation: none !important;
+  }
 }
