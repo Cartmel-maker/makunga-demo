@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import { ComplianceProvider } from '@/components/compliance-modal'
 import { IndustrialFaq } from '@/components/industrial-faq'
+import { Navbar } from '@/components/navbar'
 import './globals.css'
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-jakarta' })
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`bg-background ${jakarta.variable}`}>
       <body className="font-sans antialiased">
         <ComplianceProvider>
+          <Navbar />
           {children}
           <IndustrialFaq />
         </ComplianceProvider>

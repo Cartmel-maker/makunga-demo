@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ArrowUpRight, Award, Factory, ShieldCheck } from 'lucide-react'
+import { SubpageHeader } from '@/components/subpage-header'
 
 const owners = [
   {
@@ -20,15 +21,13 @@ const owners = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-background px-5 py-16 text-foreground sm:px-8 lg:px-12">
-      <div className="mx-auto max-w-6xl">
-        <Link href="/" className="font-sans text-sm text-primary hover:text-foreground">← Back home</Link>
-        <p className="mt-16 font-sans text-xs font-bold tracking-[0.16em] text-primary">LEADERSHIP</p>
-        <h1 className="mt-4 max-w-4xl text-balance font-sans text-5xl font-bold tracking-[-0.06em] sm:text-7xl">Owner-managed. Family-led.</h1>
-        <p className="mt-8 max-w-2xl font-sans text-lg leading-8 text-muted-foreground">
-          Established in 2009 and based in Richards Bay, Makhunga Crane and Engineering cc is owned by Annalise Brown and led in the field by Christopher Brown. Together they bring 28 years of combined hands-on experience in crane servicing, lifting machinery, inspections, and engineering solutions.
-        </p>
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+    <main className="min-h-screen bg-[#0B0C0E] text-foreground">
+      <SubpageHeader
+        title="Owner-managed. Family-led."
+        subtitle="Established in 2009 and based in Richards Bay, Makhunga Crane and Engineering cc is owned by Annalise Brown and led in the field by Christopher Brown. Together they bring 28 years of combined hands-on experience in crane servicing, lifting machinery, inspections, and engineering solutions."
+      />
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
+        <div className="grid gap-6 lg:grid-cols-2">
           {owners.map((owner) => (
             <article key={owner.name} className="overflow-hidden rounded-2xl border border-primary/20 bg-zinc-900/70 shadow-2xl backdrop-blur-xl">
               <div className="relative aspect-[16/9] overflow-hidden border-b border-primary/30 bg-zinc-950">

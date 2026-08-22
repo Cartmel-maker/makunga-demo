@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ArrowUpRight, Check, FileCheck2, ShieldCheck, Truck, Wrench } from 'lucide-react'
+import { SubpageHeader } from '@/components/subpage-header'
 
 const services = [
   { number: '01', title: 'Lifting Equipment Services', icon: Wrench, summary: 'Supply, repair, servicing, and maintenance of all makes of lifting equipment.', bullets: ['Manufacturing and fabrication of crane girders and custom steel components', 'Hoist and crane remanufacturing and refurbishment', 'Installation, erection, decommissioning, and modernisation of lifting systems'] },
@@ -9,5 +10,41 @@ const services = [
 ]
 
 export default function ServicesPage() {
-  return <main className="min-h-screen bg-background text-foreground"><div className="relative isolate overflow-hidden border-b border-white/10 px-5 pb-20 pt-6 sm:px-8 sm:pb-24 lg:px-12"><div className="pointer-events-none absolute inset-0 -z-20 bg-[url('/industrial-crane-hero.png')] bg-cover bg-center opacity-20" aria-hidden="true" /><div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/90 to-black/70" aria-hidden="true" /><div className="mx-auto max-w-7xl"><Link href="/" className="text-sm text-primary transition-colors hover:text-orange-300">← Back home</Link><div className="mt-20 max-w-4xl"><span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-[10px] font-bold tracking-[0.16em] text-primary">ENGINEERING SERVICES</span><h1 className="mt-6 text-balance text-5xl font-bold leading-[0.98] tracking-[-0.065em] sm:text-7xl">Capability built for <span className="text-primary">critical uptime.</span></h1><p className="mt-7 max-w-2xl text-pretty text-base leading-7 text-zinc-300 sm:text-lg sm:leading-8">From lifting equipment and statutory inspections to custom fabrication and 24/7 breakdown response, Makhunga keeps industrial operations moving.</p></div></div></div><section className="relative isolate overflow-hidden px-5 py-20 sm:px-8 sm:py-24 lg:px-12"><div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_75%_18%,rgba(255,85,0,0.08),transparent_30%)]" aria-hidden="true" /><div className="mx-auto max-w-7xl"><div className="grid gap-5 md:grid-cols-2">{services.map(({ number, title, icon: Icon, summary, bullets }) => <article key={number} className="flex h-full flex-col rounded-2xl border border-zinc-800 bg-zinc-900/85 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary sm:p-8"><div className="flex items-start justify-between"><div className="flex size-12 items-center justify-center rounded-xl border border-primary/25 bg-primary/10 text-primary"><Icon className="size-6" aria-hidden="true" /></div><span className="text-sm font-bold tracking-[0.16em] text-zinc-600">{number}</span></div><h2 className="mt-8 text-2xl font-bold tracking-[-0.04em]">{title}</h2><p className="mt-3 text-sm leading-6 text-zinc-300">{summary}</p><ul className="mt-7 flex flex-col gap-3">{bullets.map((bullet) => <li key={bullet} className="flex gap-3 text-sm leading-6 text-zinc-300"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden="true" />{bullet}</li>)}</ul><a href="/#support" className="mt-8 inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5">Request Service Quote <ArrowUpRight className="size-4" /></a></article>)}</div></div></section></main>
+  return (
+    <main className="min-h-screen bg-[#0B0C0E] text-foreground">
+      <SubpageHeader
+        title={<>Capability built for <span className="text-primary">critical uptime.</span></>}
+        subtitle="From lifting equipment and statutory inspections to custom fabrication and 24/7 breakdown response, Makhunga keeps industrial operations moving."
+      />
+      <section className="px-5 py-16 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-5 md:grid-cols-2">
+            {services.map(({ number, title, icon: Icon, summary, bullets }) => (
+              <article key={number} className="flex h-full flex-col rounded-2xl border border-zinc-800 bg-zinc-900/85 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary sm:p-8">
+                <div className="flex items-start justify-between">
+                  <div className="flex size-12 items-center justify-center rounded-xl border border-primary/25 bg-primary/10 text-primary">
+                    <Icon className="size-6" aria-hidden="true" />
+                  </div>
+                  <span className="text-sm font-bold tracking-[0.16em] text-zinc-600">{number}</span>
+                </div>
+                <h2 className="mt-8 text-2xl font-bold tracking-[-0.04em]">{title}</h2>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">{summary}</p>
+                <ul className="mt-7 flex flex-col gap-3">
+                  {bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3 text-sm leading-6 text-zinc-300">
+                      <Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden="true" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/#support" className="mt-8 inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5">
+                  Request Service Quote <ArrowUpRight className="size-4" />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  )
 }
