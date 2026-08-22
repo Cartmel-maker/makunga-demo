@@ -29,9 +29,7 @@ const philosophyCards = [
 
 export function PhilosophyGrid() {
   return (
-    <section className="relative isolate overflow-hidden border-t border-white/10 px-5 py-20 sm:px-8 sm:py-24 lg:px-12" aria-labelledby="philosophy-title">
-      <div className="pointer-events-none absolute inset-0 -z-20 bg-[url('/industrial-crane-hero.png')] bg-cover bg-center" aria-hidden="true" />
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-black/60" aria-hidden="true" />
+    <section className="relative isolate overflow-hidden bg-transparent px-5 py-20 sm:px-8 sm:py-24 lg:px-12" aria-labelledby="philosophy-title">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
           <span className="inline-flex rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 font-sans text-[10px] font-bold tracking-[0.16em] text-primary">
