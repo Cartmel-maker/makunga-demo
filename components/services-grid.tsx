@@ -80,7 +80,7 @@ export function ServicesGrid() {
                   </li>
                 ))}
               </ul>
-              <a href="#support" className="mt-auto pt-8 font-sans text-sm font-bold text-primary transition-colors hover:text-orange-300">
+              <a href="#support" className="mt-auto pt-8 font-sans text-sm font-bold text-primary transition-all duration-300 hover:text-orange-300">
                 {link}
               </a>
             </article>

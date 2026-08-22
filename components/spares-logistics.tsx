@@ -27,7 +27,7 @@ export function SparesLogistics() {
                 <span>KZN SPARES CORRIDOR</span>
                 <div className="flex items-center gap-3">
                   <span className="rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-primary">ACTIVE ROUTE</span>
-                  <a href="#support" className="inline-flex items-center gap-2 rounded-lg bg-primary px-3.5 py-2 text-[10px] font-bold tracking-normal text-primary-foreground transition-transform hover:-translate-y-0.5">Request Urgent Spares Order <ArrowUpRight aria-hidden="true" className="size-3.5" /></a>
+                  <a href="#support" className="inline-flex items-center gap-2 rounded-lg bg-primary px-3.5 py-2 text-[10px] font-bold tracking-normal text-primary-foreground transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,85,0,0.3)]">Request Urgent Spares Order <ArrowUpRight aria-hidden="true" className="size-3.5" /></a>
                 </div>
               </div>
               <div className="relative my-8 h-36 overflow-hidden sm:h-40">

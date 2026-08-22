@@ -22,7 +22,7 @@ function isActive(pathname: string, href: string) {
 function navLinkClass(active: boolean) {
   return active
     ? 'text-[#FF5500] font-semibold border-b-2 border-[#FF5500] pb-1'
-    : 'text-zinc-300 hover:text-white transition-colors'
+    : 'text-zinc-300 transition-all duration-300 hover:text-white'
 }
 
 export function Navbar() {

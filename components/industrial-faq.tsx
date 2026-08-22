@@ -21,7 +21,7 @@ export function FAQAccordion() {
           <button
             type="button"
             onClick={() => setOpen(open === index ? -1 : index)}
-            className="flex min-h-14 w-full items-center justify-between gap-6 px-4 py-3 text-left font-sans text-sm font-semibold text-foreground sm:px-5"
+            className="flex min-h-14 w-full items-center justify-between gap-6 px-4 py-3 text-left font-sans text-sm font-semibold text-foreground transition-all duration-300 hover:text-primary sm:px-5"
           >
             <span>{question}</span>
             <ChevronDown className={`size-5 shrink-0 text-primary transition-transform ${open === index ? 'rotate-180' : ''}`} />
