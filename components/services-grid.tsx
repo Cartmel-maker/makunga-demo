@@ -29,8 +29,8 @@ const services = [
     icon: Truck,
     bullets: [
       '24-hr turnaround from Johannesburg supply link',
-      'Official spares for DEMAG, Kone, Yale, Stahl, Güralp',
-      'Custom security doors & factory steel fabrication',
+      'Official spares for DEMAG, Güralp, Planeta, Surelift, Stahl, Kone, Yale, and Kito',
+      'Custom steel fabrication, rigging accessories, and generator servicing',
     ],
     link: 'Order Spares & Parts →',
   },

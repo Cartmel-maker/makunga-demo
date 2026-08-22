@@ -22,8 +22,8 @@ export function ComplianceProvider({ children }: { children: ReactNode }) {
                 <X className="size-5" />
               </button>
             </div>
-            <p className="mt-5 font-sans text-sm leading-6 text-zinc-300">Makhunga Crane &amp; Engineering supports statutory load testing, visual inspections, safety documentation, and Department of Labour approved lifting equipment compliance.</p>
-            <a href="mailto:compliance@makhunga.co.za" className="mt-6 inline-flex rounded-lg bg-primary px-4 py-3 font-sans text-sm font-bold text-primary-foreground">Speak to compliance</a>
+            <p className="mt-5 font-sans text-sm leading-6 text-zinc-300">Makhunga Crane and Engineering cc is a certified LME 327 company registered with the Department of Labour. We adhere to the OHSA, MHSA, SABS, and all requirements set out by the Department of Labour for statutory load testing, visual inspections, and safety files.</p>
+            <a href="mailto:annalise@makhunga.co.za" className="mt-6 inline-flex rounded-lg bg-primary px-4 py-3 font-sans text-sm font-bold text-primary-foreground">Speak to compliance</a>
           </div>
         </div>
       ) : null}

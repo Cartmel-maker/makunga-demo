@@ -9,7 +9,7 @@ export function QuickDispatchForm() {
 
   return (
     <form
-      className="h-fit rounded-2xl border border-white/10 bg-[#121418]/90 p-6 backdrop-blur-sm"
+      className="rounded-2xl border border-white/10 bg-[#121418]/90 p-6"
       onSubmit={(event) => {
         event.preventDefault()
         setSent(true)

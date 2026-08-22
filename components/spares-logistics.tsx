@@ -3,7 +3,7 @@
 import { ArrowUpRight, Check, Clock3, MapPin, Truck } from 'lucide-react'
 import { useState } from 'react'
 
-const brands = ['DEMAG', 'KONE', 'YALE', 'STAHL', 'GÜRALP', 'PLANETA', 'SURELIFT', 'KITO']
+const brands = ['DEMAG', 'GÜRALP', 'PLANETA', 'SURELIFT', 'STAHL', 'KONE', 'YALE', 'KITO', 'BLACK BEAR', 'PRO-STAR']
 const parts = ['Rope Guides', 'Control Pendants', 'Brake Modules', 'Heavy Gearboxes']
 
 export function SparesLogistics() {
@@ -52,7 +52,7 @@ export function SparesLogistics() {
             </div>
           </div>
         </div>
-        <div className="mt-12"><div className="flex items-center gap-3 text-zinc-400"><Clock3 aria-hidden="true" className="size-4 text-primary" /><p className="text-[10px] font-semibold tracking-[0.18em]">COMPATIBLE WITH LEADING GLOBAL BRANDS</p></div><div className="mt-5 flex max-w-full gap-3 overflow-x-auto pb-2 sm:grid sm:grid-cols-4 sm:overflow-visible sm:pb-0 lg:grid-cols-8">{brands.map((brand) => <button type="button" key={brand} onClick={() => setActiveBrand(brand)} className={`min-h-12 rounded-lg border px-4 py-3 text-sm font-semibold transition-all ${activeBrand === brand ? 'border-primary bg-primary text-primary-foreground shadow-[0_0_18px_rgba(255,85,0,0.2)]' : 'border-zinc-700/50 bg-zinc-800/50 text-zinc-300 hover:border-primary hover:text-foreground'}`}>{brand}</button>)}</div><div className="mt-6 rounded-xl border border-zinc-800 bg-zinc-900/80 p-5 backdrop-blur-sm"><div className="flex items-center justify-between gap-4"><div><p className="text-xs font-bold text-foreground">Genuine parts available for {activeBrand}</p><p className="mt-1 text-xs text-zinc-400">Prepared for rapid dispatch from our strategic corridor.</p></div><Check className="size-5 text-primary" /></div><div className="mt-4 flex flex-wrap gap-2">{parts.map((part) => <span key={part} className="rounded-full border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-xs text-zinc-300">{part}</span>)}</div></div></div>
+        <div className="mt-12"><div className="flex items-center gap-3 text-zinc-400"><Clock3 aria-hidden="true" className="size-4 text-primary" /><p className="text-[10px] font-semibold tracking-[0.18em]">COMPATIBLE WITH LEADING GLOBAL BRANDS</p></div><div className="mt-5 flex max-w-full gap-3 overflow-x-auto pb-2 sm:grid sm:grid-cols-5 sm:overflow-visible sm:pb-0">{brands.map((brand) => <button type="button" key={brand} onClick={() => setActiveBrand(brand)} className={`min-h-12 rounded-lg border px-4 py-3 text-sm font-semibold transition-all ${activeBrand === brand ? 'border-primary bg-primary text-primary-foreground shadow-[0_0_18px_rgba(255,85,0,0.2)]' : 'border-zinc-700/50 bg-zinc-800/50 text-zinc-300 hover:border-primary hover:text-foreground'}`}>{brand}</button>)}</div><div className="mt-6 rounded-xl border border-zinc-800 bg-zinc-900/80 p-5 backdrop-blur-sm"><div className="flex items-center justify-between gap-4"><div><p className="text-xs font-bold text-foreground">Genuine parts available for {activeBrand}</p><p className="mt-1 text-xs text-zinc-400">Prepared for rapid dispatch from our strategic corridor.</p></div><Check className="size-5 text-primary" /></div><div className="mt-4 flex flex-wrap gap-2">{parts.map((part) => <span key={part} className="rounded-full border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-xs text-zinc-300">{part}</span>)}</div></div></div>
       </div>
     </section>
   )

@@ -10,7 +10,7 @@ const philosophyCards = [
   {
     title: 'Our Purpose',
     description:
-      'To keep people, plants, and production safe by delivering dependable lifting solutions that meet the highest standards of safety and quality.',
+      'To keep people, plants, and production safe by delivering dependable lifting solutions that meet the highest standards of safety, quality, and compliance.',
     icon: Activity,
   },
   {
@@ -22,7 +22,7 @@ const philosophyCards = [
   {
     title: 'Owner-Managed Trust',
     description:
-      "Led directly by Annalise and Chris Brown with 28 years combined experience. You aren't just a client account; you are part of our extended family.",
+      'A family enterprise owned by Annalise Brown and led in the field by Chris Brown — 28 years combined experience. Clients are welcomed as part of the family.',
     icon: Users,
   },
 ]
