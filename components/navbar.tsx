@@ -63,7 +63,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-5 md:flex" aria-label="Main navigation">
           {links.map(([label, href]) => {
             const active = isActive(pathname, href)
             return (
@@ -80,19 +80,16 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="tel:0357973136" className="hidden text-xs text-zinc-400 md:block">
-            035 797 3136
-          </a>
           <a
-            href="#support"
-            className="hidden rounded-lg bg-[#FF5500] px-4 py-2 text-sm font-medium text-white transition-all hover:bg-[#e04b00] sm:inline-flex"
+            href="tel:0835027655"
+            className="hidden rounded-lg bg-[#FF5500] px-4 py-2 text-sm font-bold text-black transition-all duration-300 hover:scale-[1.02] hover:bg-[#e04b00] hover:shadow-[0_0_20px_rgba(255,85,0,0.3)] md:inline-flex"
           >
             24/7 Breakdown Dispatch
           </a>
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
-            className="rounded-lg border border-white/15 bg-zinc-900/80 p-2.5 text-white lg:hidden"
+            className="rounded-lg border border-white/15 bg-zinc-900/80 p-2.5 text-white transition-all duration-300 hover:border-[#FF5500] md:hidden"
             aria-expanded={open}
             aria-controls="mobile-navigation"
             aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
@@ -105,7 +102,7 @@ export function Navbar() {
 
       <div
         className={cn(
-          'fixed inset-0 z-40 bg-black/70 transition-opacity lg:hidden',
+          'fixed inset-0 z-40 bg-black/70 transition-opacity md:hidden',
           open ? 'opacity-100' : 'pointer-events-none opacity-0',
         )}
         onClick={() => setOpen(false)}
@@ -116,8 +113,8 @@ export function Navbar() {
         id="mobile-navigation"
         aria-label="Mobile navigation"
         className={cn(
-          'fixed inset-y-0 right-0 z-50 flex w-[min(100%,20rem)] flex-col border-l border-white/10 bg-[#0B0C0E] px-5 py-6 shadow-2xl transition-transform duration-300 lg:hidden',
-          open ? 'translate-x-0' : 'translate-x-full',
+          'fixed inset-x-0 top-16 z-50 flex max-h-[calc(100dvh-4rem)] w-full flex-col overflow-y-auto border-b border-white/10 bg-[#0B0C0E]/95 px-5 py-6 shadow-2xl backdrop-blur-md transition-transform duration-300 md:hidden',
+          open ? 'translate-y-0 opacity-100' : '-translate-y-4 pointer-events-none opacity-0',
         )}
       >
         <div className="mb-8 flex items-center justify-between">
