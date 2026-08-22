@@ -20,7 +20,7 @@ export default function CaseStudiesPage() {
         title="Work built for uptime."
         subtitle="Typical lifting, compliance, and fabrication work delivered from the Richards Bay workshop — aligned with the services published by Makhunga Crane and Engineering cc."
       />
-      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-8 sm:py-16 lg:px-12">
         <section className="flex flex-col gap-4">
           {cases.map((item, index) => (
             <article key={item.title} className="rounded-2xl border border-white/10 bg-zinc-900/70 p-6 backdrop-blur-xl">

@@ -18,7 +18,7 @@ export default function CompliancePage() {
         title="Compliance without compromise."
         subtitle="Certified LME 327 company registered with the Department of Labour. Statutory load testing, visual inspections, crack testing, colour coding, and safety file compilation for lifting equipment."
       />
-      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-8 sm:py-16 lg:px-12">
         <section className="grid gap-5 lg:grid-cols-3">
           {certifications.map(({ title, department, badge, subtitle, icon: Icon, specs, action }) => (
             <article key={title} className="flex flex-col rounded-2xl border border-white/10 bg-zinc-900/70 p-6 backdrop-blur-xl transition-colors hover:border-primary/50">

@@ -8,7 +8,7 @@ export default function ContactPage() {
   const [priority, setPriority] = useState<'urgent' | 'standard'>('urgent')
   const [sent, setSent] = useState(false)
   return (
-    <main className="bg-background px-5 py-16 text-foreground sm:px-8 lg:px-12">
+    <main className="bg-background px-4 py-8 text-foreground sm:px-8 sm:py-16 lg:px-12">
       <div className="mx-auto max-w-5xl">
         <Link href="/" className="inline-flex items-center gap-2 font-sans text-sm text-primary hover:text-foreground">
           <ArrowLeft className="size-4" /> Back home

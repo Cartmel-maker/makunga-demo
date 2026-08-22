@@ -26,7 +26,7 @@ export default function AboutPage() {
         title="Owner-managed. Family-led."
         subtitle="Established in 2009 and based in Richards Bay, Makhunga Crane and Engineering cc is owned by Annalise Brown and led in the field by Christopher Brown. Together they bring 28 years of combined hands-on experience in crane servicing, lifting machinery, inspections, and engineering solutions."
       />
-      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-8 sm:py-16 lg:px-12">
         <div className="grid gap-6 lg:grid-cols-2">
           {owners.map((owner) => (
             <article key={owner.name} className="overflow-hidden rounded-2xl border border-primary/20 bg-zinc-900/70 shadow-2xl backdrop-blur-xl">

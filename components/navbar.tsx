@@ -146,14 +146,14 @@ export function Navbar() {
           })}
         </div>
         <div className="mt-auto flex flex-col gap-3 border-t border-white/10 pt-6">
-          <a href="tel:0357973136" className="inline-flex items-center gap-2 text-sm text-zinc-300">
+          <a href="tel:0835027655" className="inline-flex min-h-12 items-center gap-2 rounded-lg border border-[#FF5500]/40 bg-[#FF5500]/10 px-3 text-sm font-semibold text-white transition-all duration-300 hover:border-[#FF5500] hover:bg-[#FF5500]/20">
             <Phone className="size-4 text-[#FF5500]" />
-            035 797 3136
+            Emergency phone dispatch
           </a>
           <a
             href="#support"
             onClick={() => setOpen(false)}
-            className="inline-flex items-center justify-center rounded-lg bg-[#FF5500] px-4 py-2 text-sm font-medium text-white transition-all hover:bg-[#e04b00]"
+            className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#FF5500] px-4 py-2 text-sm font-bold text-black transition-all duration-300 hover:scale-[1.02] hover:bg-[#e04b00] hover:shadow-[0_0_20px_rgba(255,85,0,0.3)]"
           >
             24/7 Breakdown Dispatch
           </a>

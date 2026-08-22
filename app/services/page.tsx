@@ -17,7 +17,7 @@ export default function ServicesPage() {
         subtitle="From lifting equipment and statutory inspections to custom fabrication and 24/7 breakdown response, Makhunga keeps industrial operations moving."
       />
       <section className="px-5 py-16 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-8 sm:py-16 lg:px-12">
           <div className="grid gap-5 md:grid-cols-2">
             {services.map(({ number, title, icon: Icon, summary, bullets }) => (
               <article key={number} className="flex h-full flex-col rounded-2xl border border-zinc-800 bg-zinc-900/85 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary sm:p-8">
