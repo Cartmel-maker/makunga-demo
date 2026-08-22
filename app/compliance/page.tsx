@@ -5,6 +5,8 @@ import { ArrowUpRight, BadgeCheck, Download, ShieldCheck, Wrench } from 'lucide-
 import { ComplianceTrigger } from '@/components/compliance-trigger'
 import { SubpageHeader } from '@/components/subpage-header'
 
+const oemBrands = ['DEMAG', 'Güralp', 'Planeta', 'Surelift', 'Stahl', 'Kone', 'Yale', 'Kito', 'Black Bear', 'Pro-Star']
+
 const certifications = [
   { title: 'LME 327 Certificate of Competence', department: 'Department of Labour', badge: 'Official Registration', subtitle: 'Certified Lifting Machinery Entity registered with the Department of Labour', icon: BadgeCheck, specs: ['LME 327 registered', 'Qualified inspecting officers', 'Load test certificates issued after every test'], action: 'Request LME verification' },
   { title: 'Load Testing & Inspection', department: 'Statutory Compliance', badge: 'Statutory Compliance', subtitle: 'Visual inspection, load testing, and crack testing of load-bearing equipment', icon: Wrench, specs: ['OHSA-aligned load testing', 'Crack testing and condition assessments', 'Certificates with LMI reports and recommendations'], action: 'Request a site inspection' },
@@ -21,7 +23,7 @@ export default function CompliancePage() {
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-8 sm:py-16 lg:px-12">
         <section className="grid gap-5 lg:grid-cols-3">
           {certifications.map(({ title, department, badge, subtitle, icon: Icon, specs, action }) => (
-            <article key={title} className="flex flex-col rounded-2xl border border-white/10 bg-zinc-900/70 p-6 backdrop-blur-xl transition-colors hover:border-primary/50">
+            <article key={title} className="flex flex-col rounded-xl border border-white/10 bg-zinc-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/50">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex size-11 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-primary">
                   <Icon />
@@ -45,6 +47,20 @@ export default function CompliancePage() {
               </a>
             </article>
           ))}
+        </section>
+        <section className="mt-8 rounded-xl border border-white/10 bg-zinc-900/50 p-6 backdrop-blur-sm" aria-labelledby="oem-brands-heading">
+          <div className="flex flex-col gap-2">
+            <p className="text-xs font-bold tracking-[0.14em] text-primary">OEM COMPATIBILITY</p>
+            <h2 id="oem-brands-heading" className="text-xl font-bold text-white">Supported equipment brands</h2>
+            <p className="text-sm leading-6 text-zinc-300">Our inspection and compliance desk supports a broad range of lifting equipment manufacturers.</p>
+          </div>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {oemBrands.map((brand) => (
+              <span key={brand} className="rounded-full border border-white/10 bg-zinc-800/80 px-3 py-1.5 text-xs font-semibold text-zinc-200">
+                {brand}
+              </span>
+            ))}
+          </div>
         </section>
         <section id="support" className="mt-12 flex flex-col gap-5 rounded-2xl border border-primary/30 bg-primary/10 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <div>

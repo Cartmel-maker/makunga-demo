@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { ArrowUpRight, Check, FileCheck2, ShieldCheck, Truck, Wrench } from 'lucide-react'
 import { SubpageHeader } from '@/components/subpage-header'
 
+const oemBrands = ['DEMAG', 'Güralp', 'Planeta', 'Surelift', 'Stahl', 'Kone', 'Yale', 'Kito', 'Black Bear', 'Pro-Star']
+
 const services = [
   { number: '01', title: 'Lifting Equipment Services', icon: Wrench, summary: 'Supply, repair, servicing, and maintenance of all makes of lifting equipment.', bullets: ['Manufacturing and fabrication of crane girders and custom steel components', 'Hoist and crane remanufacturing and refurbishment', 'Installation, erection, decommissioning, and modernisation of lifting systems'] },
   { number: '02', title: 'Testing, Inspection & Compliance', icon: FileCheck2, summary: 'Statutory load testing and visual inspections by LME 327 registered professionals.', bullets: ['Crack testing and condition assessments', 'Colour coding and colour chart management', 'Load test certificates, inspection reports, and safety file compilation'] },
@@ -20,7 +22,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-8 sm:py-16 lg:px-12">
           <div className="grid gap-5 md:grid-cols-2">
             {services.map(({ number, title, icon: Icon, summary, bullets }) => (
-              <article key={number} className="flex h-full flex-col rounded-2xl border border-zinc-800 bg-zinc-900/85 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary sm:p-8">
+              <article key={number} className="flex h-full flex-col rounded-xl border border-white/10 bg-zinc-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 sm:p-8">
                 <div className="flex items-start justify-between">
                   <div className="flex size-12 items-center justify-center rounded-xl border border-primary/25 bg-primary/10 text-primary">
                     <Icon className="size-6" aria-hidden="true" />
@@ -37,7 +39,14 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/#support" className="mt-8 inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5">
+                <div className="mt-7 flex flex-wrap gap-2" aria-label="Supported OEM brands">
+                  {oemBrands.map((brand) => (
+                    <span key={brand} className="rounded-full border border-white/10 bg-zinc-800/80 px-2.5 py-1 text-xs font-semibold text-zinc-200">
+                      {brand}
+                    </span>
+                  ))}
+                </div>
+                <Link href="/#support" className="mt-8 inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-bold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50">
                   Request Service Quote <ArrowUpRight className="size-4" />
                 </Link>
               </article>
